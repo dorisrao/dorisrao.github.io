@@ -7,57 +7,58 @@ image: "img/a.jpg"
 date:   2017-05-21 11:24pm
 ---
 
-### Stateless Component (Pure Function)
+### Stateless Component (Pure Function)  
 
 
-### A pure function is a function which:
-Given the same input, will always return the same output.
-Produces no side effects.
-Relies on no external mutable state.
+### A pure function is a function which:  
 
-Example of pure function: 
+Given the same input, will always return the same output.  
+Produces no side effects.  
+Relies on no external mutable state.  
 
-function sum(a, b){
-	var sum = a + b;
-	return sum;
-}
+Example of pure function:  
 
-Example of impure function: 
+function sum(a, b){  
+	var sum = a + b;  
+	return sum;  
+}  
 
-var count = 0;
-function increaseCount(val) {
-    count += val;
-}
-
-
-All React components, which are referred to as stateless components, must act like pure functions with respect to their props.
-
-When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object "props".
-
-Example of rendering a component: 
-
-const element = &lt;Welcome name="Sara" /&gt;;
+Example of impure function:  
+  
+var count = 0;  
+function increaseCount(val) {  
+    count += val;  
+}  
 
 
-function Welcome(props) {
-  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
-}
+All React components, which are referred to as stateless components, must act like pure functions with respect to their props.  
 
-const element = &lt;Welcome name="Sara" /&gt;;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object "props".  
+
+Example of rendering a component:  
+
+const element = &lt;Welcome name="Sara" /&gt;;  
 
 
-We can use object destructuring to access the props passed to the component:
-const Welcome = ({ name }) =>
-  &lt;div&gt;
-    &lt;h1&gt;Hello, {name}&lt;/h1&gt;
-  &lt;/div&gt;
+function Welcome(props) {  
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;  
+}  
+
+const element = &lt;Welcome name="Sara" /&gt;;  
+ReactDOM.render(  
+  element,  
+  document.getElementById('root')  
+);  
 
 
-reference: 
-https://facebook.github.io/react/docs/components-and-props.html
+We can use object destructuring to access the props passed to the component:  
+const Welcome = ({ name }) =>  
+  &lt;div&gt;  
+    &lt;h1&gt;Hello, {name}&lt;/h1&gt;  
+  &lt;/div&gt;  
+
+
+reference:  
+https://facebook.github.io/react/docs/components-and-props.html  
 https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976
 
