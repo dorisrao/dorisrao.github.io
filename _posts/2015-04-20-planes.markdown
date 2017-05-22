@@ -7,7 +7,55 @@ image: "img/a.jpg"
 date:   2017-05-21 11:24pm
 ---
 
-### 
+### Concepts of Functions 
 
 
-### 
+### A pure function is a function which:
+Given the same input, will always return the same output.
+Produces no side effects.
+Relies on no external mutable state.
+
+Example of pure function: 
+
+function sum(a, b){
+	var sum = a + b;
+	return sum;
+}
+
+Example of impure function: 
+
+var count = 0;
+function increaseCount(val) {
+    count += val;
+}
+
+
+All React components, which are referred to as stateless components, must act like pure functions with respect to their props.
+
+When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object "props".
+
+Example of rendering a component: 
+
+const element = <Welcome name="Sara" />;
+
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+
+We can use object destructuring to access the props passed to the component:
+const Welcome = ({ name }) =>
+  <div>
+    <h1>Hello, {name}</h1>
+  </div>
+
+
+
+
