@@ -1,0 +1,7 @@
+# Site settings
+title: 
+description: Step after step the ladder is ascended.
+keywords: Blogging, Learn, Fun
+author: Doris
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://dorisrao.github.io/" # the base hostname & protocol for your site
