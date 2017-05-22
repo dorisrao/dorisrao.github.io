@@ -1,13 +1,13 @@
 ---
-title:  "Planes are cool!"
-subtitle: "The Fly!"
+title:  "React Component"
+subtitle: "some highlights"
 author: "Doris"
 avatar: "img/authors/doris.png"
 image: "img/a.jpg"
 date:   2017-05-21 11:24pm
 ---
 
-### Concepts of Functions 
+### Stateless Component (Pure Function)
 
 
 ### A pure function is a function which:
@@ -57,5 +57,7 @@ const Welcome = ({ name }) =>
   </div>
 
 
-
+reference: 
+https://facebook.github.io/react/docs/components-and-props.html
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976
 
